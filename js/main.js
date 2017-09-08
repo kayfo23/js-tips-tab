@@ -24,24 +24,51 @@ var tipsList = [
 ];
 
 // Tip Limit counter
+var tipLimit = tipsList.length;
 
-
-// Generate a number
-
+// Generate a number between 0 and length of tipsList
+function generateNumber() {
+	return Math.floor(Math.random() * (tipsList.length));
+}
 
 // Generate a tip:
 // 1. Get random number from generateNumber()
 // 2. Use the random number to get the tip from the array
 // 3. Show the tip
+function generateTip() {
+	var number = generateNumber();
+	var tip = tipsList[number];
 
+	var tipElement = document.querySelector('.js-tip');
+
+	tipElement.innerHTML = tip;
+
+	var tipLimitCount = document.querySelector('.tip-limit-count');
+	tipLimitCount.innerHTML = tipLimit;
+}
 
 // Tip button click
 // 1. Select the tip button
 // 2. Add a click event listener
 // 3. When the button is clicked:
+function onTipButtonClick() {
+	var tipButton = document.querySelector('.tip-button');
+	tipButton.addEventListener('click', function() {
+		tipLimit--;
+		if (tipLimit >= 0) {
+			generateTip();
+			if (tipLimit === 0) {
+				tipButton.innerHTML = "See you in another tab!";
+				tipButton.classList.add('disabled');
+			}
+		}
+	})
+}
+onTipButtonClick();
 // 3a. Subtract 1 from the tipLimit
 // 3b. If the tipLimit is still above or equal to 0, generate a new tip
 // 3c. If not, change the button text and look
 
 
 // Get the first tip
+generateTip();
