@@ -20,7 +20,9 @@ var tipsList = [
 
 	"To generate a random number, use JavaScript's built in function <span class='code'>Math.random()</span>.",
 
-	"Arrays hold lists of data. You can access any of the list items by using bracket notation, like this: <br> <span class='code-block'>var myArray = ['pears', 'asparagus', 'bananas'];<br>myArray[1]; // asparagus</span>"
+	"Arrays hold lists of data. You can access any of the list items by using bracket notation, like this: <br> <span class='code-block'>var myArray = ['pears', 'asparagus', 'bananas'];<br>myArray[1]; // asparagus</span>",
+
+	"Closure: Combination of a function and the lexical environment within which that function was declared."
 ];
 
 // Tip Limit counter

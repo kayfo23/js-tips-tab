@@ -26,7 +26,7 @@ body {
 }
 
 .code-block {
-  font-family: monaco, Consolas, 'Oxygen', monospace;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
   background-color: #336180;
   padding: 0.5em 0.75em;
   font-size: 1.15rem;
