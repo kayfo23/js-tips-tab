@@ -26,13 +26,17 @@ body {
 }
 
 .code-block {
-  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-family: monaco, Consolas, 'Oxygen', monospace;
   background-color: #336180;
   padding: 0.5em 0.75em;
   font-size: 1.15rem;
   border-radius: 0.15rem;
   display: block;
   margin: 1rem 0;
+}
+
+.cat-icon {
+  height: 40px;
 }
 
 .tip-number {
@@ -47,13 +51,14 @@ body {
 
 .js-tip {
   margin: auto;
+  height: 300px;  //added to keep button in same place for all tips
   line-height: 2rem;
   font-weight: 300;
   font-size: 1.375rem
 }
 
-.tip-button {
-  background-color: #34B3A0;
+.btn {
+  background-color: #336180;
   outline: none;
   padding: 1rem 1.5rem;
   display: inline-block;
@@ -64,6 +69,10 @@ body {
   font-weight: bolder;
   border: none;
   color: white;
+}
+
+.tip-button {
+  background-color: #34B3A0;
 }
 
 .disabled {
